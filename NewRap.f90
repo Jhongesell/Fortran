@@ -1,12 +1,12 @@
 !Autor: Claudio Iván Esparza Castañeda
 !Título: Newton-Raphson simple
-!Descripción: Programa que calcula las raíces de una función por medio del método de Newton-Raphson
-!Fecha: 21/10/2018
+!Descripción: Programa que calcula las raíces de una función por medio del método de Newton-Raphson. Versión modificada para raíces múltiples
+!Fecha: 23/10/2018
   
 
 Program newrap
   implicit none
-  REAL::e, er, x, y, f, fp, xe
+  REAL::e, er, x, y, f, fp, fpp, xe
   INTEGER::i
   CALL graf1()
   WRITE(*, *) "Valor inicial" !Preguntar final del intervalo
@@ -17,7 +17,7 @@ Program newrap
   do
      i=i+1 !Añadir uno al contador
      xe=x !Asignar x anterior
-     x=x-fp(x)/f(x)
+     x=x-f(x)*fp(x)/(fp(x)**2-f(x)*fpp(x))
      if (x .NE. 0) then !Validación del intervalo
         e=abs((x-xe)/x)*100 !Cálculo del error
      end if
@@ -111,3 +111,10 @@ function fp(x) !Función derivada
   REAL::fp, x
   fp=cos(x)+sin(x)
 end function fp
+
+function fpp(x) !Función doble derivada
+  implicit none
+  REAL::fpp, x
+  fpp=-sin(x)+cos(x)
+end function fpp
+
