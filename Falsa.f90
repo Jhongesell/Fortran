@@ -3,7 +3,7 @@
 !Descripción: Este programa permite encontrar las raíces de una función cerca de un punto por medio del método de la regla falsa y graficarlo funciones del tipo y=f(x)
 !Fecha: 16/07/2018
 
-Program bis
+Program false
   implicit none
   REAL::e, er, a, b, x, y, f, xe
   INTEGER::i
@@ -41,7 +41,7 @@ Program bis
   write(3, *) x, f(x) !Escribir en archivo
   close(3)
   CALL graf2()
-end Program bis
+end Program falsa
 
 subroutine graf1() !subrutina que grafica
   implicit none !Quitar variables implícitas
