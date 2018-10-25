@@ -1,5 +1,5 @@
 !Autor: Claudio Iván Esparza Castañeda
-!Título: Newton-Raphson simple
+!Título: Newton-Raphson (Raíces múltiples)
 !Descripción: Programa que calcula las raíces de una función por medio del método de Newton-Raphson. Versión modificada para raíces múltiples
 !Fecha: 23/10/2018
   
