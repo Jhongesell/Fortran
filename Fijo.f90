@@ -1,9 +1,9 @@
 !Autor: Claudio Iván Esparza Castañeda
-!Título: Bisección
+!Título: Punto fijo
 !Descripción: Este programa permite encontrar las raíces de una función cerca de un punto y graficarlo funciones del tipo y=f(x)
 !Fecha: 15/07/2018
 
-Program bis
+Program fijo
   implicit none
   REAL::e, er, x, x0, xe, f, g
   INTEGER::i
@@ -31,7 +31,7 @@ Program bis
   write(3, *) x, f(x) !Escribir en archivo
   close(3)
   CALL graf2()
-end Program bis
+end Program fijo
 
 subroutine graf1() !subrutina que grafica
   implicit none !Quitar variables implícitas
