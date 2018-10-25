@@ -1,5 +1,5 @@
 !Autor: Claudio Iván Esparza Castañeda
-!Título: Bisección
+!Título: Regla falsa
 !Descripción: Este programa permite encontrar las raíces de una función cerca de un punto por medio del método de la regla falsa y graficarlo funciones del tipo y=f(x)
 !Fecha: 16/07/2018
 
