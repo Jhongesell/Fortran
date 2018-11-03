@@ -1,13 +1,15 @@
 !Autor: Claudio Iván Esparza Castañeda
-!Título: Evaluar polinomios y su derivada
-!Descripción: Programa que se encarga de evaluar polinomios mediante la anidación de los términos, así como la evaluación de la derivada
-!Fecha: 28/10/2018
+!Título: División sintética
+!Descripción: Programa que se encarga de dividir un polinomio entre un binomio por el método de la división sintética
+!Fecha: 31/10/2018
 
 program DivSint !Inicio del programa
   implicit none !Sin variables implícitas
   REAL, allocatable, dimension(:)::a, b !Vector tipo REAL con dimensión dinámica
   REAL::p, d, x, r, s, t !Varibles tipo REAL
   INTEGER::i, n, m !Variables enteras
+  d=0.0 !Inicializar valor de derivada
+  p=0.0 !Inicializar valor de polinomio
   WRITE(*, *) "Grado del polinomio" !Preguntar por el grado del polinomio
   READ(*, *) n
   allocate(a(0:n), b(0:n-1)) !Asignar valor a variable dinámica
