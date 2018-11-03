@@ -8,8 +8,6 @@ program DivSint !Inicio del programa
   REAL, allocatable, dimension(:)::a, b !Vector tipo REAL con dimensión dinámica
   REAL::p, d, x, r, s, t !Varibles tipo REAL
   INTEGER::i, n, m !Variables enteras
-  d=0.0 !Inicializar valor de derivada
-  p=0.0 !Inicializar valor de polinomio
   WRITE(*, *) "Grado del polinomio" !Preguntar por el grado del polinomio
   READ(*, *) n
   allocate(a(0:n), b(0:n-1)) !Asignar valor a variable dinámica
